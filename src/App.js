@@ -1,40 +1,20 @@
 import React from 'react';
 
 class App extends React.Component {
-    constructor(props){
-      super(props)
-      console.log('constructor 실행완료');
-    }
-    
     state = {
-        count: 0,
+        isLoading : true,
+				movies: [],
     };
-
-		add = () => {
-      this.setState({count:this.state.count+ 1})
-    };
-
-    minus = () => {
-      this.setState({count: this.state.count-1})
-    };
-    componentDidMount(){
-      console.log('componentDidMount 실행완료');
+    componentDidMount() {
+        // 영화 데이터 로딩!
+        setTimeout(() => {
+            this.setState({ isLoading: false })
+        }, 5000);
     }
-    componentDidUpdate(){
-      console.log('componentDidUpdate 실행완료');
-    }
-    componentWillUnmount(){
-      console.log('비번');
-    }
-    render(){
-      console.log('render 실행완료');
-        return (
-            <div>
-                <h1> The number is: {this.state.count} </h1>
-                <button onClick={this.add}>더하기</button>
-                <button onClick={this.minus}>빼기</button>
-            </div>
-        );
+    render() {
+        const { isLoading } = this.state;
+        // We are ready 부분에 영화 데이터를 출력
+        return <div> {isLoading ? '로딩중....' : '로딩완료'} </div>;
     }
 }
 

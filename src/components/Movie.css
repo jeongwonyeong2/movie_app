@@ -2,7 +2,6 @@
     background-color: white;
     margin-bottom: 70px;
     font-weight: 300;
-    height: 500px;
     padding: 20px;
     border-radius: 5px;
     color: #adaeb9;
@@ -17,7 +16,7 @@
 }
 .movies img{
     position: relative;
-    top: 350px;
+    top: -50px;
     max-width: 150px;
     width: 100%;
     margin-right: 30px;
@@ -32,7 +31,8 @@
     font-size: 24px;
     color: #2c2c2c;
 }
-.movies .movie__genres{
+
+.movie .movie__genres {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -40,7 +40,7 @@
     flex-wrap: wrap;
     margin: 5px 0px;
 }
-.movies .movie__genres li,movies .movie__year{
+.movie__genres li, .movie .movie__year {
     margin-right: 10px;
     font-size: 14px;
 }

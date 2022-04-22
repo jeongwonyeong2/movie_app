@@ -1,2 +1,3 @@
-# Moive App 2022
-React JS App 2022 정원영
+# Movie App 2020
+
+React JS Fundamentals Course 2020
